@@ -9,25 +9,30 @@ export function getConfig() {
         paymentMethods: [
             {
                 hostedPage: {
-                    title: 'PIX, Cartão ou Boleto via PagBank',
+                    title: 'Checkout PagBank (PIX, Boleto ou Cartão de Crédito)',
                     billingAddressMandatoryFields: ['EMAIL', 'FIRST_NAME', 'LAST_NAME'],
                     logos: {
                         white: {
-                            svg: 'https://static.wixstatic.com/shapes/94b5e2_403ceb582027431cb92f38fd18d1843c.svg',
-                            png: 'https://freesvg.org/img/15930333081593032446pitr_Bananas_icon.png'
+                            svg: 'https://cdn.jsdelivr.net/gh/r-martins/PagBank-Assets/icons/pagbank.svg',
+                            png: 'https://cdn.jsdelivr.net/gh/r-martins/PagBank-Assets/icons/pagbank.png'
                         },
                         colored: {
-                            svg: 'https://static.wixstatic.com/shapes/94b5e2_403ceb582027431cb92f38fd18d1843c.svg',
-                            png: 'https://freesvg.org/img/15930333081593032446pitr_Bananas_icon.png'
+                            svg: 'https://cdn.jsdelivr.net/gh/r-martins/PagBank-Assets/icons/pagbank.svg',
+                            png: 'https://cdn.jsdelivr.net/gh/r-martins/PagBank-Assets/icons/pagbank.png'
                         }
                     }
-                },
+                }
             }],
         credentialsFields: [
             {
                 simpleField: {
                     name: 'connect_key',
                     label: 'Connect Key'
+                }
+            },{
+                simpleField: {
+                    name: 'store_url',
+                    label: 'URL da Loja (com https:// e barra no final)',
                 }
             },
             {
@@ -50,20 +55,7 @@ export function getConfig() {
                     label: 'Aceitar Pagamentos com Boleto',
                     tooltip: 'Disponível na conta em 2 dias após pagamento'
                 }
-            },
-            {
-                simpleField: {
-                    name: 'pix_expiry_min',
-                    label: 'Validade do PIX em minutos'
-                }
-            },
-            {
-                simpleField: {
-                    name: 'boleto_expiry_days',
-                    label: 'Validade do Boleto em dias'
-                }
             }
         ]
     }
 }
-
