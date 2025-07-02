@@ -1,0 +1,18 @@
+{
+  "name": "pagbank-wix",
+  "version": "1.0.0",
+  "description": "PagBank para Wix - Receba pagamentos com Pix, Boleto e Cartão de Crédito no Wix.",
+  "homepage": "https://pbintegracoes.com/wix",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node setup.js"
+  },
+  "bugs": {
+    "url": "https://ajuda.pbintegracoes.com/hc/pt-br/requests/new"
+  },
+  "files": [
+    "src",
+    "setup.js"
+  ],
+  "dependencies": {}
+}
